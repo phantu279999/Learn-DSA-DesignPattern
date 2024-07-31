@@ -161,13 +161,12 @@ class Client:
 		elif config['type'] == 'Modern':
 			self.factory = ModernFurnitureFactory()
 		else:
-			self.factory = FurnitureFactory()
+			raise Exception("You provide type current hasn't")
 
 	def main(self) -> None:
 		product_a = self.factory.createChair()
 		product_b = self.factory.createSofa()
 		product_c = self.factory.createCoffeeTable()
-
 		print(f"{product_a.hasLegs()}")
 		print(f"{product_a.sitOn()}")
 		print(f"{product_b.hasLegs()}")
