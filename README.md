@@ -23,5 +23,8 @@ Use the Builder pattern to get rid of a “telescoping constructor”.
 Use the Builder to construct Composite trees or other complex objects.
 
 ### Prototype
+Use the Prototype pattern when your code shouldn’t depend on the concrete classes of objects that you need to copy.
+
+Use the pattern when you want to reduce the number of subclasses that only differ in the way they initialize their respective objects.
 
 ### Singleton
