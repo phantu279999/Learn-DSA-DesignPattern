@@ -16,6 +16,11 @@ Use the Abstract Factory when your code needs to work with various families of r
 The Abstract Factory provides you with an interface for creating objects from each class of the product family. As long as your code creates objects via this interface, you don’t have to worry about creating the wrong variant of a product which doesn’t match the products already created by your app.
 
 ### Builder
+Use the Builder pattern to get rid of a “telescoping constructor”.
+
+ Use the Builder pattern when you want your code to be able to create different representations of some product (for example, stone and wooden houses).
+
+Use the Builder to construct Composite trees or other complex objects.
 
 ### Prototype
 
