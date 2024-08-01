@@ -28,3 +28,8 @@ Use the Prototype pattern when your code shouldn’t depend on the concrete clas
 Use the pattern when you want to reduce the number of subclasses that only differ in the way they initialize their respective objects.
 
 ### Singleton
+Use the Singleton pattern when a class in your program should have just a single instance available to all clients; for example, a single database object shared by different parts of the program.
+
+Use the Singleton pattern when you need stricter control over global variables.
+
+

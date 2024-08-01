@@ -30,6 +30,26 @@ class HouseBuilder:
 		self.house.windows = n
 		return self
 
+	def build_doors(self, doors):
+		self.house.doors = doors
+		return self
+
+	def build_rooms(self, rooms):
+		self.house.rooms = rooms
+		return self
+
+	def huild_hasGarage(self, hasGarage):
+		self.house.hasGarage = hasGarage
+		return self
+
+	def build_hasSwimPool(self, hasSwimPool):
+		self.house.hasSwimPool = hasSwimPool
+		return self
+
+	def build_hasGarden(self, hasGarden):
+		self.house.hasGarden = hasGarden
+		return hasGarden
+
 	def build(self):
 		return self.house
 
