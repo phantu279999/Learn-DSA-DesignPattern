@@ -26,7 +26,7 @@ class JPGImage(ImagePrototype):
 
 
 if __name__ == "__main__":
-	my_image = JPGImage(r'G:\Py\DSAWP\image-home-22.jpg')
+	my_image = JPGImage(r'/image-home-22.jpg')
 
 	clone = my_image.clone()
 	clone.resize(200, 200)
