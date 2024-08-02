@@ -32,4 +32,30 @@ Use the Singleton pattern when a class in your program should have just a single
 
 Use the Singleton pattern when you need stricter control over global variables.
 
+## Structural Patterns
 
+### Adapter
+
+Use the Adapter class when you want to use some existing class, but its interface isn't compatible with the rest of your code.
+
+Use the pattern when you want to reuse several existing subclasses that lack some common functionality that can't be added to the superclass.
+
+### Bridge
+
+
+### Composite
+
+
+### Decorator
+
+
+### Facade
+
+
+### Flyweight
+
+
+### Proxy
+
+
+## Behavioral Patterns
