@@ -44,7 +44,9 @@ Use the pattern when you want to reuse several existing subclasses that lack som
 
 
 ### Composite
+Use the Composite pattern when you have to implement a tree-like object structure.
 
+Use the pattern when you want the client code to treat both simple and complex elements uniformly.
 
 ### Decorator
 
