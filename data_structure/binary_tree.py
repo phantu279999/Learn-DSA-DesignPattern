@@ -76,6 +76,34 @@ class BinaryTree:
 			return 0
 		return max(self.height(root.left), self.height(root.right)) + 1
 
+	def convert_mirror_tree(self, root):
+		if root is None:
+			return root
+		self.convert_mirror_tree(root.left)
+		self.convert_mirror_tree(root.right)
+		root.left, root.right = root.right, root.left
+		return root
+
+	def symmetric_tree(self, root):
+		if root is None:
+			return True
+		if root.data != root.data:
+			return False
+
+		def helper(root1, root2):
+			if root1 is None and root2 is None:
+				return True
+			if root1 is None or root2 is None:
+				return False
+			if root1.data != root2.data:
+				return False
+			l = helper(root1.left, root2.right)
+			r = helper(root1.right, root2.left)
+			return all([l, r])
+		l = root.left
+		r = root.right
+		return helper(l, r)
+
 
 if __name__ == '__main__':
 	root = BinaryTree()
@@ -87,6 +115,7 @@ if __name__ == '__main__':
 	root.insert_node(15)
 	root.insert_node(2)
 
-	print(root.preorder_traversal(root.root))
-	print(root.height(root.root))
 	print(root.levelorder_traversal(root.root))
+
+	root_3 = root.convert_mirror_tree(root.root)
+	print(root.levelorder_traversal(root_3))
