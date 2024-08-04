@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-
+# Component
 class General(ABC):
 
 	@abstractmethod
@@ -8,6 +8,7 @@ class General(ABC):
 		pass
 
 
+# Leaf
 class Colonel(General):
 	def say(self):
 		print("Yes sir, Im a Colonel")
@@ -18,6 +19,7 @@ class Captain(General):
 		print('Yes sir, Im a Captain')
 
 
+# Composite
 class CompositeArmy(General):
 	def __init__(self):
 		self._armies = []
