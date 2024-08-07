@@ -91,3 +91,23 @@ Use the CoR pattern when the set of handlers and their order are supposed to cha
 ### Command
 
 
+### Iterator
+
+
+### Mediator
+Use the Mediator pattern when it’s hard to change some of the classes because they are tightly coupled to a bunch of other classes.
+
+Use the pattern when you can’t reuse a component in a different program because it’s too dependent on other components.
+
+Use the Mediator when you find yourself creating tons of component subclasses just to reuse some basic behavior in various contexts.
+
+### Memento
+Use the Memento pattern when you want to produce snapshots of the object’s state to be able to restore a previous state of the object.
+
+Use the pattern when direct access to the object’s fields/getters/setters violates its encapsulation.
+
+### Observer
+Use the Observer pattern when changes to the state of one object may require changing other objects, and the actual set of objects is unknown beforehand or changes dynamically.
+
+Use the pattern when some objects in your app must observe others, but only for a limited time or in specific cases.
+
