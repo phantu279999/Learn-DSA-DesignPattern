@@ -16,6 +16,7 @@ class CreateCommand(Command):
 	def execute(self, data):
 		self.receiver.create(data)
 
+
 class UpdateCommand(Command):
 
 	def __init__(self, receiver):
@@ -23,6 +24,7 @@ class UpdateCommand(Command):
 
 	def execute(self, data):
 		self.receiver.update(data)
+
 
 class DeleteCommand(Command):
 

@@ -1,7 +1,7 @@
 from __future__ import annotations
 from abc import ABC, abstractmethod
 
-
+# Abstract Factory
 class FurnitureFactory(ABC):
 	@abstractmethod
 	def createChair(self) -> Chair:
@@ -16,6 +16,7 @@ class FurnitureFactory(ABC):
 		pass
 
 
+# Concrete Factory
 class ArtDecoFurnitureFactory(FurnitureFactory):
 	def createChair(self) -> Chair:
 		return ArtDecoChair()
@@ -49,6 +50,7 @@ class ModernFurnitureFactory(FurnitureFactory):
 		return ModernCoffeeTable()
 
 
+# Abstract Product
 class Chair(ABC):
 	@abstractmethod
 	def hasLegs(self) -> str:
@@ -59,6 +61,7 @@ class Chair(ABC):
 		pass
 
 
+# Concrete Product
 class ArtDecoChair(Chair):
 	def hasLegs(self) -> str:
 		return "ArtDecoChair 4 legs"
@@ -83,6 +86,7 @@ class ModernChair(Chair):
 		return "ModernChair sit on living room"
 
 
+# Abstract Product
 class Sofa(ABC):
 	@abstractmethod
 	def hasLegs(self) -> str:
@@ -93,6 +97,7 @@ class Sofa(ABC):
 		pass
 
 
+# Concrete Product
 class ArtDecoSofa(Sofa):
 	def hasLegs(self) -> str:
 		return "ArtDecoSofa 4 legs"
@@ -117,6 +122,7 @@ class ModernSofa(Sofa):
 		return "ModernSofa sit on bedroom"
 
 
+# Abstract Product
 class CoffeeTable(ABC):
 	@abstractmethod
 	def hasLegs(self) -> str:
@@ -127,6 +133,7 @@ class CoffeeTable(ABC):
 		pass
 
 
+# Concrete Product
 class ArtDecoCoffeeTable(CoffeeTable):
 	def hasLegs(self) -> str:
 		return "ArtDecoCoffeeTable 4 legs"
