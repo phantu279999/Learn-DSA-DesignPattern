@@ -28,7 +28,21 @@ class DoubleLinkedList:
 		...
 
 	def remove(self, data):
-		...
+		if self.head is None:
+			return None
+		temp = self.head
+		while temp:
+			if temp.data == data:
+				break
+			temp = temp.next
+		if temp.next:
+			prev = temp.prev
+			prev.next = temp.next
+			temp.next.prev = prev
+		else:
+			prev = temp.prev
+			prev.next = None
+			self.tail = prev
 
 	def display_left_to_right(self):
 		temp = self.head
