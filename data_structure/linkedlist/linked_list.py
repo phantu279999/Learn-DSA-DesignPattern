@@ -1,6 +1,9 @@
+from typing import Any
+
+
 class Node:
 
-    def __init__(self, data):
+    def __init__(self, data: Any):
         self.data = data
         self.next = None
 
@@ -11,7 +14,7 @@ class LinkedList:
         self.head = None
         self.tail = None
 
-    def append(self, value):
+    def append(self, value: Any) -> None:
         new_node = Node(value)
         if self.head is None:
             self.head = new_node
@@ -20,7 +23,7 @@ class LinkedList:
         self.tail.next = new_node
         self.tail = new_node
 
-    def insert_position(self, position, value):
+    def insert_position(self, position: int, value: Any) -> None:
         new_node = Node(value)
         if self.head is None:
             self.head = new_node
@@ -44,7 +47,7 @@ class LinkedList:
             temp.next = new_node
             new_node.next = next_node
 
-    def delete_position(self, position):
+    def delete_position(self, position: int) -> None:
         if self.head is None:
             print('Linked list is empty!')
             return
@@ -72,7 +75,7 @@ class LinkedList:
 
             prev.next = temp.next
 
-    def delete_duplicates(self):
+    def delete_duplicates(self) -> None:
         store = []
         temp = self.head
         prev = None
@@ -108,7 +111,7 @@ class LinkedList:
 
         return new_lists
 
-    def reverse_linkedlist(self):
+    def reverse_linkedlist(self) -> None:
         cur_node = self.head
         prev = None
         while cur_node:
@@ -119,7 +122,7 @@ class LinkedList:
 
         self.head = prev
 
-    def get_length(self):
+    def get_length(self) -> int:
         if self.head is None:
             return 0
         count = 0
@@ -130,18 +133,13 @@ class LinkedList:
 
         return count
 
-    def middle_element_of_linkedlist(self):
-        n = 0
-        store = []
+    def middle_element_of_linkedlist(self) -> Node:
         temp = self.head
-        while temp:
-            n += 1
-            store.append(temp.data)
+        for _ in range(self.get_length() // 2):
             temp = temp.next
+        return temp
 
-        return store[n // 2]
-
-    def has_loop(self):
+    def has_loop(self) -> bool:
         visited = []
         temp = self.head
         while temp:
@@ -153,7 +151,7 @@ class LinkedList:
 
         return False
 
-    def is_palindrome(self):
+    def is_palindrome(self) -> bool:
         if self.head is None:
             return True
 
@@ -167,7 +165,7 @@ class LinkedList:
             return True
         return False
 
-    def traversal_linkedlist(self):
+    def traversal_linkedlist(self) -> None:
         temporary = self.head
         while temporary is not None:
             print(temporary.data, end=" ")
@@ -190,6 +188,11 @@ if __name__ == "__main__":
     ll.append(5)
     ll.append(6)
 
+    print("Middle node in linked list")
+    print(ll.middle_element_of_linkedlist().data)
+    print("Traversal linkedlist")
     ll.traversal_linkedlist()
+    print("Delete duplicate")
     ll.delete_duplicates()
+    print("Traversal linkedlist")
     ll.traversal_linkedlist()
