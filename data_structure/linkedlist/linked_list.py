@@ -111,7 +111,7 @@ class LinkedList:
     def reverse_linkedlist(self):
         cur_node = self.head
         prev = None
-        while cur_node is not None:
+        while cur_node:
             temp = cur_node.next
             cur_node.next = prev
             prev = cur_node
